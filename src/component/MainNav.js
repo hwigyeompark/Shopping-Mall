@@ -6,7 +6,7 @@ import { Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class MainNav extends Component{
-    const code = (props) => {
+    render(){
         return(
             <Navbar>
                 <Navbar.Header>
