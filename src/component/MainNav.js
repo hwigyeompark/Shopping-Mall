@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
 import { Navbar } from 'reactstrap';
+import { Nav } from 'reactstrap';
+import { NavItem } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class MainNav extends Component{
     render(){
         return(
-          <Navbar className="nav navbar-default">
-              <div className="container-fluid">
-                  <a className="navbar-brand">ShoppingMall</a>
-                  <div className="collapse navbar-collapse">
-                      <ul className="nav navbar-nav">
-                          <li className="active">메뉴1</li>
-                          <li className="active">메뉴2</li>
-                          <button type="button" className="btn btn-default navbar-btn">로그인</button>
-                          <button type="button" className="btn btn-default navbar-btn">회원가입</button>
-                      </ul>
-                  </div>
-              </div>
+          <Navbar>
+              <Navbar.Header>
+                  <Navbar.Brand>
+                      <a href="#home">ShoppingMall</a>
+                  </Navbar.Brand>
+              </Navbar.Header>
+              <Nav>
+                  <NavItem href="#menu1">Menu1</NavItem>
+                  <NavItem href="#menu2">Menu2</NavItem>
+              </Nav>
+              <Nav pullRight>
+              </Nav>
           </Navbar>
         );
     }
