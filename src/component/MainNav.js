@@ -22,7 +22,9 @@ class MainNav extends Component{
               marginRight:'10px'
             },
             button : {
-                marginLeft:'5px'
+                margin:'5px',
+                opacity:'.7',
+                fontSize:'0.9em'
             }
         };
         return(
@@ -40,7 +42,7 @@ class MainNav extends Component{
                     </Nav>
                     <Nav className="ml-auto">
                         <NavItem style={style.buttonGroup}>
-                            <Button style={style}>LOGIN</Button>
+                            <Button style={style.button}>LOGIN</Button>
                             <Button style={style.button}>REGISTER</Button>
                         </NavItem>
                     </Nav>
