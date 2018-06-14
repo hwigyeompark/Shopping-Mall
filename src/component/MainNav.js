@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Router, Link } from 'react-router-dom';
-import { Nav, NavItem, NavLink, Navbar, NavbarBrand, Collapse, NavbarToggler, Button } from 'reactstrap';
+import { Nav, NavItem, NavLink, Navbar, NavbarBrand, Collapse, NavbarToggler, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -12,10 +12,14 @@ class MainNav extends Component{
         this.state = {
             isOpen: false
         };
+        this.state = {
+            modal:false
+        };
     }
     toggle(){
         this.setState({
-            isOpen : !this.state.isOpen
+            isOpen : !this.state.isOpen,
+            modal : !this.state.modal
         });
     }
     render(){
@@ -45,7 +49,19 @@ class MainNav extends Component{
 
                         <Nav className="ml-auto">
                             <NavItem style={style.buttonGroup}>
-                                <Button style={style.button}>LOGIN</Button>
+                                <Button style={style.button} onClick={this.toggle}>LOGIN</Button>
+                                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                                    <ModalHeader toggle={this.toggle}>LOGIN</ModalHeader>
+                                    <ModalBody>
+                                        <form>
+                                            ID : <input type="text" name="id"/><br/><br/>
+                                            PASSWORD : <input type="password" name="password"/>
+                                        </form>
+                                    </ModalBody>
+                                    <ModalFooter>
+                                        <Button color="primary" onClick={this.toggle}>LOGIN</Button>
+                                    </ModalFooter>
+                                </Modal>
                                 <Button style={style.button}>REGISTER</Button>
                             </NavItem>
                         </Nav>
