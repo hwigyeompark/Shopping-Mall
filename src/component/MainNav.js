@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+import { Router, Link } from 'react-router-dom';
 import { Nav, NavItem, NavLink, Navbar, NavbarBrand, Collapse, NavbarToggler, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 class MainNav extends Component{
     constructor(props){
@@ -40,12 +42,14 @@ class MainNav extends Component{
                             <NavLink href="/menu2">menu2</NavLink>
                         </NavItem>
                     </Nav>
-                    <Nav className="ml-auto">
-                        <NavItem style={style.buttonGroup}>
-                            <Button style={style.button}>LOGIN</Button>
-                            <Button style={style.button}>REGISTER</Button>
-                        </NavItem>
-                    </Nav>
+
+                        <Nav className="ml-auto">
+                            <NavItem style={style.buttonGroup}>
+                                <Button style={style.button}>LOGIN</Button>
+                                <Button style={style.button}><Link to="/Register">REGISTER</Link></Button>
+                            </NavItem>
+                        </Nav>
+
                 </Collapse>
             </Navbar>
         );
