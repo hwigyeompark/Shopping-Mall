@@ -46,7 +46,7 @@ class MainNav extends Component{
                         <Nav className="ml-auto">
                             <NavItem style={style.buttonGroup}>
                                 <Button style={style.button}>LOGIN</Button>
-                                <Button style={style.button}><Link to="/Register">REGISTER</Link></Button>
+                                <Button style={style.button}>REGISTER</Button>
                             </NavItem>
                         </Nav>
 
