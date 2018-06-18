@@ -1,0 +1,23 @@
+ul, li{list-style: none;}
+a{text-decoration: none;}
+#navbar{
+    width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 2%;
+    background-color: #e0e0e0;
+    z-index: 100;
+}
+
+#navbar > ul{
+    width: 100%;
+    line-height: 50px;
+}
+
+#navbar > ul li{
+    float: left;
+    width: 16%;
+}
+#navbar > ul li a{
+    color: #555;
+}
