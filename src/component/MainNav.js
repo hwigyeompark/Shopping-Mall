@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Redirect  } from 'react-router';
+import { Redirect } from 'react-router';
 import { Nav, NavItem, NavLink, Navbar, NavbarBrand, Collapse, NavbarToggler, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -15,10 +15,11 @@ class MainNav extends Component{
         this.state = {
             modal:false
         };
+        this.state = {
+            redirect : true
+        }
     }
-    movementRegister = () =>{
-        this.setState({redirect : true});
-    };
+
     toggle(){
         this.setState({
             isOpen : !this.state.isOpen,
@@ -26,10 +27,14 @@ class MainNav extends Component{
             redirect : this.state.redirect
         });
     }
-    render(){
-        if (this.state.redirect) {
+
+    movementRegister = () =>{
+        if (this.state.redirect){
             return <Redirect push to="/register"/>;
         }
+    };
+
+    render(){
         const style={
             buttonGroup : {
               marginRight:'10px'
