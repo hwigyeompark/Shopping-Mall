@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Router, Link } from 'react-router-dom';
+import {  } from 'react-router';
 import { Nav, NavItem, NavLink, Navbar, NavbarBrand, Collapse, NavbarToggler, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -16,6 +16,9 @@ class MainNav extends Component{
             modal:false
         };
     }
+    movementRegister = () =>{
+        this.props.history.push('/register');
+    };
     toggle(){
         this.setState({
             isOpen : !this.state.isOpen,
@@ -50,7 +53,7 @@ class MainNav extends Component{
                         <Nav className="ml-auto">
                             <NavItem style={style.buttonGroup}>
                                 <Button style={style.button} onClick={this.toggle}>LOGIN</Button>
-                                <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+                                <Modal isOpen={this.state.modal} toggle={this.toggle} >
                                     <ModalHeader toggle={this.toggle}>LOGIN</ModalHeader>
                                     <ModalBody>
                                         <form>
@@ -62,7 +65,7 @@ class MainNav extends Component{
                                         <Button color="primary" onClick={this.toggle}>LOGIN</Button>
                                     </ModalFooter>
                                 </Modal>
-                                <Button style={style.button}>REGISTER</Button>
+                                <Button onClick={this.movementRegister} style={style.button}>REGISTER</Button>
                             </NavItem>
                         </Nav>
 
