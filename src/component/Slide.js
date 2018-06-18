@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
 import back1 from '../img/back1.png';
 import back2 from '../img/back2.png';
-import back3 from '../img/back2.jpg';
+import back3 from '../img/back3.png';
 
 const items = [
     {
