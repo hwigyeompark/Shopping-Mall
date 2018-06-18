@@ -8,31 +8,21 @@ class MainNav extends Component{
     constructor(props){
         super(props);
 
+        this.state = {
+            isOpen: false,
+            loginModal:false,
+            registerModal:false
+        };
         this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false
-        };
-        this.state = {
-            modal:false
-        };
-        this.state = {
-            redirect : true
-        }
     }
 
     toggle(){
         this.setState({
             isOpen : !this.state.isOpen,
-            modal : !this.state.modal,
-            redirect : this.state.redirect
+            loginModal : !this.state.loginModal,
+            registerModal : !this.state.registerModal
         });
     }
-
-    movementRegister = () =>{
-        if (this.state.redirect){
-            return <Redirect push to="/register"/>;
-        }
-    };
 
     render(){
         const style={
@@ -61,8 +51,8 @@ class MainNav extends Component{
 
                         <Nav className="ml-auto">
                             <NavItem style={style.buttonGroup}>
-                                <Button style={style.button} onClick={this.toggle}>LOGIN</Button>
-                                <Modal isOpen={this.state.modal} toggle={this.toggle} >
+                                <Button onClick={this.toggle} style={style.button}>LOGIN</Button>
+                                <Modal isOpen={this.state.loginModal} toggle={this.toggle} >
                                     <ModalHeader toggle={this.toggle}>LOGIN</ModalHeader>
                                     <ModalBody>
                                         <form>
@@ -71,13 +61,30 @@ class MainNav extends Component{
                                         </form>
                                     </ModalBody>
                                     <ModalFooter>
-                                        <Button color="primary" onClick={this.toggle}>LOGIN</Button>
+                                        <Button onClick={this.toggle} color="primary">LOGIN</Button>
                                     </ModalFooter>
                                 </Modal>
-                                <Button onClick={this.movementRegister} style={style.button}>REGISTER</Button>
+
+                                <Button onClick={this.toggle} style={style.button}>REGISTER</Button>
+                                <Modal isOpen={this.state.registerModal} toggle={this.toggle} >
+                                    <ModalHeader toggle={this.toggle}>REGISTER</ModalHeader>
+                                    <ModalBody>
+                                        <form>
+                                            아이디 : <input type="text" name="id"/><br/><br/>
+                                            패스워드 : <input type="password" name="password"/><br/><br/>
+                                            패스워드 확인 : <input type="password" name="passwordC"/><br/><br/>
+                                            성명 : <input type="text" name="name"/><br/><br/>
+                                            전화번호 : <input type="text" name="phone"/><br/><br/>
+                                            주소 : <input type="text" name="addr"/><br/><br/>
+                                            이메일 : <input type="text" name="email"/>
+                                        </form>
+                                    </ModalBody>
+                                    <ModalFooter>
+                                        <Button onClick={this.toggle} color="primary">REGISTER</Button>
+                                    </ModalFooter>
+                                </Modal>
                             </NavItem>
                         </Nav>
-
                 </Collapse>
             </Navbar>
         );
