@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
-import { Nav, NavItem, NavLink, Navbar, NavbarBrand, Collapse, NavbarToggler, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/Header.css';
+import logo from '../img/logo.png';
 
 
 class Header extends Component{
     render(){
         return(
-            <div></div>
+            <div id="header">
+                <h1><img src={logo}/></h1>
+            </div>
         )
     }
 }

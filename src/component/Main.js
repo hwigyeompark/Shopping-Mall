@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Content from "./Content";
+import Slide from "./Slide";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Main extends Component {
     render() {
         return (
             <div>
-                <Content/>
+                <Slide/>
             </div>
         );
     }

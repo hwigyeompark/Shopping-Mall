@@ -6,8 +6,6 @@ import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
 import App from './App';
-import Register from "./component/Register";
-import Login from "./component/Login";
 
 ReactDOM.render(
     <App />,

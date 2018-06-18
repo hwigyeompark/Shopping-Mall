@@ -1,0 +1,13 @@
+#header{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+#header h1{
+    margin-top: 2%;
+    text-align: center;
+}
+#header h1 img{
+    width: 250px;
+    height: auto;
+}

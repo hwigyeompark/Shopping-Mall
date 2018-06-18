@@ -19,7 +19,7 @@ const items = [
     }
 ];
 
-class Content extends Component{
+class Slide extends Component{
     constructor(props){
         super(props);
         this.state = { imageIndex: 0 };
@@ -77,4 +77,4 @@ class Content extends Component{
         );
     }
 }
-export default Content;
+export default Slide;
