@@ -2,12 +2,13 @@
     width: 60%;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 2%;
+    margin-top: 0.8%;
 }
 #header h1{
-    margin-top: 2%;
     text-align: center;
 }
 #header h1 img{
-    width: 250px;
+    width: 220px;
     height: auto;
 }
