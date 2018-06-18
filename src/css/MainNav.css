@@ -4,8 +4,8 @@ a{text-decoration: none;}
     width: 60%;
     height: 50px;
     margin: 0 auto;
-    margin-top: 2%;
-    background-color: #e0e0e0;
+    margin-top: 3%;
+    background-color: #F4F3F3;
     z-index: 100;
 }
 
@@ -17,7 +17,9 @@ a{text-decoration: none;}
 #navbar > ul li{
     float: left;
     width: 16%;
+    text-align: center;
 }
 #navbar > ul li a{
     color: #555;
+    text-align: center;
 }
