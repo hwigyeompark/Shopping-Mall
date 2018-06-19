@@ -12,3 +12,18 @@
     width: 220px;
     height: auto;
 }
+
+#header > ul{
+    float: right;
+    margin-top: -3.9%;
+    width: 20%;
+}
+#header > ul li{
+    float: left;
+    width: 45%;
+    text-align: center;
+}
+#header > ul li a{
+    color: #333;
+    text-align: center;
+}
