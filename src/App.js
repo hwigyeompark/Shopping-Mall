@@ -26,6 +26,8 @@ class App extends Component {
                         <Route path='/category/skirt' component={Skirt}/>
                         <Route path='/category/acc' component={Acc}/>
                         <Route path='/category/shoes' component={Shoes}/>
+
+                        <Route path='/category/shoes' component={Shoes}/>
                     </div>
                 </BrowserRouter>
                 <Footer/>

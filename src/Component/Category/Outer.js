@@ -4,7 +4,6 @@ class Outer extends Component{
     render(){
         return(
             <div>
-
             </div>
         );
     }
