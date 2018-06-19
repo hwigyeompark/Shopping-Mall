@@ -66,7 +66,7 @@ class Slide extends Component{
             );
         });
         return(
-            <div>
+            <div id="slide">
                 <Carousel activeIndex={imageIndex} next={this.next} previous={this.previous}>
                     <CarouselIndicators items={items} activeIndex={imageIndex} onClickHandler={this.goToIndex} />
                     {slides}

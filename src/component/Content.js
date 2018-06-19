@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
     CardSubtitle, CardBody } from 'reactstrap';
+import card1 from '../img/card1.gif';
+import '../css/Content.css';
 
 class Content extends Component{
     render(){
         return (
-            <div>
+            <div id="content">
+                <h1>Best Item</h1>
                 <CardColumns>
                     <Card>
-                        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                        <CardImg src={card1} />
                         <CardBody>
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
