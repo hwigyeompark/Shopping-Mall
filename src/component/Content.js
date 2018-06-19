@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
     CardSubtitle, CardBody } from 'reactstrap';
-import card1 from '../img/card1.gif';
 import '../css/Content.css';
+import card1 from '../img/card1.gif';
+import card2 from '../img/card2.gif';
+import card3 from '../img/card3.png';
 
 class Content extends Component{
     render(){
@@ -20,7 +22,7 @@ class Content extends Component{
                         </CardBody>
                     </Card>
                     <Card>
-                        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                        <CardImg src={card3} />
                     </Card>
                     <Card>
                         <CardBody>
@@ -36,7 +38,7 @@ class Content extends Component{
                         <Button>Button</Button>
                     </Card>
                     <Card>
-                        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap" />
+                        <CardImg top width="100%" src={card2} />
                         <CardBody>
                             <CardTitle>Card title</CardTitle>
                             <CardSubtitle>Card subtitle</CardSubtitle>
