@@ -8,8 +8,8 @@ import p3 from '../../img/pants3.gif';
 
 
 class Pants extends Component{
-    detailView = () => {
-
+    detailView = (e) => {
+        return '<a href="/category/pants/detailPants"></a>';
     };
 
     render(){
