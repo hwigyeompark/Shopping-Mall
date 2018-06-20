@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck, CardSubtitle, CardBody } from 'reactstrap';
+import {withRouter} from 'react-router-dom';
 import '../../css/Pants.css';
 import SubNav from "../SubNav";
 import p1 from '../../img/pants1.gif';
@@ -8,8 +9,8 @@ import p3 from '../../img/pants3.gif';
 
 
 class Pants extends Component{
-    detailView = (e) => {
-        return '<a href="/category/pants/detailPants"></a>';
+    detailView = () => {
+        this.props.history.push("/category/pants/detailPants");
     };
 
     render(){
@@ -18,31 +19,37 @@ class Pants extends Component{
                 <SubNav/>
                 <div id="pants">
                     <CardDeck>
-                        <Card onClick={this.detailView}>
-                            <CardImg src={p1}/>
-                            <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                            </CardBody>
-                        </Card>
-                        <Card>
-                            <CardImg src={p2}/>
-                            <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                            </CardBody>
-                        </Card>
-                        <Card>
-                            <CardImg src={p3}/>
-                            <CardBody>
-                                <CardTitle>Card title</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                            </CardBody>
-                        </Card>
+                        <div id="card1" onClick={this.detailView}>
+                            <Card>
+                                <CardImg src={p1}/>
+                                <CardBody>
+                                    <CardTitle>Card title</CardTitle>
+                                    <CardSubtitle>Card subtitle</CardSubtitle>
+                                </CardBody>
+                            </Card>
+                        </div>
+                        <div id="card2">
+                            <Card>
+                                <CardImg src={p2}/>
+                                <CardBody>
+                                    <CardTitle>Card title</CardTitle>
+                                    <CardSubtitle>Card subtitle</CardSubtitle>
+                                </CardBody>
+                            </Card>
+                        </div>
+                        <div id="card3">
+                            <Card>
+                                <CardImg src={p3}/>
+                                <CardBody>
+                                    <CardTitle>Card title</CardTitle>
+                                    <CardSubtitle>Card subtitle</CardSubtitle>
+                                </CardBody>
+                            </Card>
+                        </div>
                     </CardDeck>
                 </div>
             </div>
         );
     }
 }
-export default Pants;
+export default withRouter(Pants);
