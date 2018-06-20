@@ -2,7 +2,7 @@ ul, li{list-style: none;}
 a{text-decoration: none;}
 
 #navbar{
-    width: 70%;
+    width: 100%;
     height: 50px;
     margin: 0 auto;
     margin-top: -1%;
@@ -11,8 +11,9 @@ a{text-decoration: none;}
 }
 
 #navbar > ul{
-    width: 100%;
+    width: 60%;
     line-height: 50px;
+    margin: 0 auto;
 }
 
 #navbar > ul li{

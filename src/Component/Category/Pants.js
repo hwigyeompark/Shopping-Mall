@@ -15,11 +15,11 @@ class Pants extends Component{
 
     render(){
         return(
-            <div>
+            <div id="pantsWrap">
                 <SubNav/>
                 <div id="pants">
                     <CardDeck>
-                        <div id="card1" onClick={this.detailView}>
+                        <div className="pantsCard" onClick={this.detailView}>
                             <Card>
                                 <CardImg src={p1}/>
                                 <CardBody>
@@ -28,7 +28,7 @@ class Pants extends Component{
                                 </CardBody>
                             </Card>
                         </div>
-                        <div id="card2">
+                        <div className="pantsCard">
                             <Card>
                                 <CardImg src={p2}/>
                                 <CardBody>
@@ -37,7 +37,7 @@ class Pants extends Component{
                                 </CardBody>
                             </Card>
                         </div>
-                        <div id="card3">
+                        <div className="pantsCard">
                             <Card>
                                 <CardImg src={p3}/>
                                 <CardBody>
