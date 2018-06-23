@@ -21,9 +21,9 @@ class App extends Component {
                 <BrowserRouter>
                     <div>
                         <Route exact path='/' component={Main}/>
-                        <Route exact path='/category/outer' component={Outer}/>
-                        <Route exact path='/category/top' component={Top}/>
-                        <Route exact path='/category/pants' component={Pants}/>
+                        <Route path='/category/outer' component={Outer}/>
+                        <Route path='/category/top' component={Top}/>
+                        <Route path='/category/pants' component={Pants}/>
                         <Route path='/category/skirt' component={Skirt}/>
                         <Route path='/category/acc' component={Acc}/>
                         <Route path='/category/shoes' component={Shoes}/>
