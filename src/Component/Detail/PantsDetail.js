@@ -13,7 +13,9 @@ class PantsDetail extends Component{
     };
 
     amountChange = (event) => {
-        alert(event.target.name)
+        if (event.target.name === "btnUp"){
+            alert(this.state.count);
+        }
     };
 
     handleChangeCount = event => {
