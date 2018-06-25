@@ -14,6 +14,23 @@ class Pants extends Component{
     };
 
     render(){
+        const plist = {
+            item1:
+                {
+                    name: '유니크 일자 PT',
+                    price: '18,000원'
+                },
+            item2:
+                {
+                    name: '심플 와이드 슬랙스',
+                    price: '11,900원'
+                },
+            item3:
+                {
+                    name: '크림치즈 일자 부즈컷',
+                    price: '23,900원'
+                }
+        };
         return(
             <div id="pantsWrap">
                 <SubNav/>
@@ -23,8 +40,8 @@ class Pants extends Component{
                             <Card>
                                 <CardImg src={p1}/>
                                 <CardBody>
-                                    <CardTitle>유니크 일자 PT</CardTitle>
-                                    <CardSubtitle>18,000원</CardSubtitle>
+                                    <CardTitle>{plist.item1.name}</CardTitle>
+                                    <CardSubtitle>{plist.item1.price}</CardSubtitle>
                                 </CardBody>
                             </Card>
                         </div>
@@ -32,8 +49,8 @@ class Pants extends Component{
                             <Card>
                                 <CardImg src={p2}/>
                                 <CardBody>
-                                    <CardTitle>심플 와이드 슬랙스</CardTitle>
-                                    <CardSubtitle>11,900원</CardSubtitle>
+                                    <CardTitle>{plist.item2.name}</CardTitle>
+                                    <CardSubtitle>{plist.item2.price}</CardSubtitle>
                                 </CardBody>
                             </Card>
                         </div>
@@ -41,8 +58,8 @@ class Pants extends Component{
                             <Card>
                                 <CardImg src={p3}/>
                                 <CardBody>
-                                    <CardTitle>크림치즈 일자 부츠컷</CardTitle>
-                                    <CardSubtitle>23,900원</CardSubtitle>
+                                    <CardTitle>{plist.item3.name}</CardTitle>
+                                    <CardSubtitle>{plist.item3.price}</CardSubtitle>
                                 </CardBody>
                             </Card>
                         </div>

@@ -29,7 +29,7 @@ class PantsItem extends Component{
                 alert("1미만의 수량은 될 수 없습니다.");
                 this.setState({
                     count: 1
-                })
+                });
             }
         }
     };
@@ -69,7 +69,7 @@ class PantsItem extends Component{
                                 </tr>
                                 <tr>
                                     <td>수량 :</td>
-                                    <td><input type="text" name="count" value={this.props.count} onChange={this.handleChangeCount}/></td>
+                                    <td><input type="number" name="count" value={this.props.count} onChange={this.handleChangeCount} /></td>
                                     <td><button onClick={this.amountChange} name="btnUp">▲</button></td>
                                     <td><button onClick={this.amountChange} name="btnDown">▼</button></td>
                                 </tr>
@@ -96,16 +96,16 @@ class PantsList extends Component {
             {
                 img: p2,
                 name: '심플 와이드 슬랙스',
-                company: '(주)바지청년들',
-                point: '180점',
-                price: '18,000'
+                company: '(주)진뱅이',
+                point: '120점',
+                price: '11,900'
             },
             {
                 img: p3,
                 name: '크림치즈 일자 부즈컷',
                 company: '(주)바지청년들',
-                point: '180점',
-                price: '18,000'
+                point: '240점',
+                price: '23,900'
             }
         ];
         return(
