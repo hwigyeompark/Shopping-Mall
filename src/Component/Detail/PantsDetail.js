@@ -13,8 +13,11 @@ class PantsDetail extends Component{
     };
 
     amountChange = (event) => {
+        const cnt = this.state.count;
         if (event.target.name === "btnUp"){
-            alert(this.state.count);
+            cnt + 1;
+        }else {
+            cnt - 1;
         }
     };
 
@@ -55,7 +58,7 @@ class PantsDetail extends Component{
                                     <td>수량 :</td>
                                     <td><input type="text" name="count" value={this.state.count} onChange={this.handleChangeCount}/></td>
                                     <td><button onClick={this.amountChange} name="btnUp">▲</button></td>
-                                    <td><button>▼</button></td>
+                                    <td><button onClick={this.amountChange} name="btnDown">▼</button></td>
                                 </tr>
                                 </tbody>
                             </table>
