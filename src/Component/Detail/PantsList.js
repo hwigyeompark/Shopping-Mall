@@ -8,14 +8,6 @@ import p3 from '../../img/pants3.gif';
 
 
 class PantsItem extends Component{
-    static defaultProps = {
-        img : 'No Img',
-        name : 'No Name',
-        company : 'No Company',
-        point : 'No Point',
-        price : 'No Price'
-    };
-
     constructor(props){
         super(props);
         this.state = {
@@ -34,7 +26,7 @@ class PantsItem extends Component{
                 count: this.state.count - 1
             });
             if (this.state.count === 1){
-                alert("1미만의 수량은 될 수 없습니다.")
+                alert("1미만의 수량은 될 수 없습니다.");
                 this.setState({
                     count: 1
                 })
