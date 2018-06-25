@@ -6,18 +6,28 @@ import SubNav from "../SubNav";
 
 class PantsDetail extends Component{
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             count: 1
         }
     };
 
     amountChange = (event) => {
-        const cnt = this.state.count;
+        event.preventDefault();
         if (event.target.name === "btnUp"){
-            cnt + 1;
+            this.setState({
+                count: this.state.count + 1
+            })
         }else {
-            cnt - 1;
+            this.setState({
+                count: this.state.count - 1
+            });
+            if (this.state.count === 1){
+                alert("1미만의 수량은 될 수 없습니다.")
+                this.setState({
+                    count: 1
+                })
+            }
         }
     };
 
@@ -56,7 +66,7 @@ class PantsDetail extends Component{
                                 </tr>
                                 <tr>
                                     <td>수량 :</td>
-                                    <td><input type="text" name="count" value={this.state.count} onChange={this.handleChangeCount}/></td>
+                                    <td><input type="number" name="count" value={this.state.count} onChange={this.handleChangeCount}/></td>
                                     <td><button onClick={this.amountChange} name="btnUp">▲</button></td>
                                     <td><button onClick={this.amountChange} name="btnDown">▼</button></td>
                                 </tr>

@@ -19,7 +19,7 @@ class Pants extends Component{
                 <SubNav/>
                 <div id="pants">
                     <CardDeck>
-                        <div className="pantsCard" onClick={this.detailView}>
+                        <div className="pantsCard">
                             <Card>
                                 <CardImg src={p1}/>
                                 <CardBody>
