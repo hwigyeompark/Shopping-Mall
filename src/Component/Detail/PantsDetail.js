@@ -12,10 +12,10 @@ class PantsDetail extends Component{
     };
     render(){
         return(
-            <div>
+            <div id="wrap">
                 <SubNav/>
                 <div id="detailPants">
-                    <Card>
+                    <Card id="pantsCard">
                         <CardImg src={pants1}/>
                     </Card>
 
@@ -31,6 +31,10 @@ class PantsDetail extends Component{
                                 <tr>
                                     <td>마일리지 :</td>
                                     <td>180점 적립</td>
+                                </tr>
+                                <tr>
+                                    <td>가격 :</td>
+                                    <td>18,000</td>
                                 </tr>
                                 <tr>
                                     <td>수량 :</td>

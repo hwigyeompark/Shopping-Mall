@@ -23,7 +23,7 @@ class App extends Component {
                         <Route exact path='/' component={Main}/>
                         <Route path='/category/outer' component={Outer}/>
                         <Route path='/category/top' component={Top}/>
-                        <Route path='/category/pants' component={Pants}/>
+                        <Route exact path='/category/pants' component={Pants}/>
                         <Route path='/category/skirt' component={Skirt}/>
                         <Route path='/category/acc' component={Acc}/>
                         <Route path='/category/shoes' component={Shoes}/>
