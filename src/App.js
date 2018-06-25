@@ -10,7 +10,7 @@ import Top from "./Component/Category/Top";
 import Pants from "./Component/Category/Pants";
 import Acc from "./Component/Category/Acc";
 import Shoes from "./Component/Category/Shoes";
-import PantsDetail from "./Component/Detail/PantsDetail";
+import PantsList from "./Component/Detail/PantsList";
 
 class App extends Component {
     render() {
@@ -28,7 +28,7 @@ class App extends Component {
                         <Route path='/category/acc' component={Acc}/>
                         <Route path='/category/shoes' component={Shoes}/>
 
-                        <Route path='/category/pants/detailPants' component={PantsDetail}/>
+                        <Route path='/category/pants/detailPants' component={PantsList}/>
                     </div>
                 </BrowserRouter>
                 <Footer/>

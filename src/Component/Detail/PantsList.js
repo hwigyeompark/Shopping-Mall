@@ -6,31 +6,8 @@ import p1 from '../../img/pants1.gif';
 import p2 from '../../img/pants2.gif';
 import p3 from '../../img/pants3.gif';
 
-class PantsDetail extends Component{
-    plist = [
-        {
-            img : p1,
-            name : '유니크 일자 PT',
-            company : '(주)바지청년들',
-            point : '180점',
-            price : '18,000'
-        },
-        {
-            img : p2,
-            name : '심플 와이드 슬랙스',
-            company : '(주)바지청년들',
-            point : '180점',
-            price : '18,000'
-        },
-        {
-            img : p3,
-            name : '크림치즈 일자 부즈컷',
-            company : '(주)바지청년들',
-            point : '180점',
-            price : '18,000'
-        }
-    ];
 
+class PantsItem extends Component{
     static defaultProps = {
         img : 'No Img',
         name : 'No Name',
@@ -77,30 +54,30 @@ class PantsDetail extends Component{
                 <SubNav/>
                 <div id="detailPants">
                     <Card id="pantsCard">
-                        <CardImg src={this.plist.img}/>
+                        <CardImg src={this.props.img}/>
                     </Card>
 
                     <div id="pantsMent">
-                        <h5>{this.plist.name}</h5>
+                        <h5>{this.props.name}</h5>
                         <hr/>
                         <form>
                             <table>
                                 <tbody>
                                 <tr>
                                     <td>제조사 :</td>
-                                    <td>{this.plist.company}</td>
+                                    <td>{this.props.company}</td>
                                 </tr>
                                 <tr>
                                     <td>마일리지 :</td>
-                                    <td>{this.plist.point}</td>
+                                    <td>{this.props.point}</td>
                                 </tr>
                                 <tr>
                                     <td>가격 :</td>
-                                    <td>{this.plist.price}</td>
+                                    <td>{this.props.price}</td>
                                 </tr>
                                 <tr>
                                     <td>수량 :</td>
-                                    <td><input type="text" name="count" value={this.plist.count} onChange={this.handleChangeCount}/></td>
+                                    <td><input type="text" name="count" value={this.props.count} onChange={this.handleChangeCount}/></td>
                                     <td><button onClick={this.amountChange} name="btnUp">▲</button></td>
                                     <td><button onClick={this.amountChange} name="btnDown">▼</button></td>
                                 </tr>
@@ -113,4 +90,40 @@ class PantsDetail extends Component{
         );
     }
 }
-export default PantsDetail;
+
+class PantsList extends Component {
+    render() {
+        const plist = [
+            {
+                img: p1,
+                name: '유니크 일자 PT',
+                company: '(주)바지청년들',
+                point: '180점',
+                price: '18,000'
+            },
+            {
+                img: p2,
+                name: '심플 와이드 슬랙스',
+                company: '(주)바지청년들',
+                point: '180점',
+                price: '18,000'
+            },
+            {
+                img: p3,
+                name: '크림치즈 일자 부즈컷',
+                company: '(주)바지청년들',
+                point: '180점',
+                price: '18,000'
+            }
+        ];
+        return(
+            <div>
+                {
+                    plist.map(pants =>
+                        <PantsItem img={pants.img} name={pants.name} company={pants.company} point={pants.point} price={pants.price}/>)
+                }
+            </div>
+        )
+    }
+}
+export default PantsList;
