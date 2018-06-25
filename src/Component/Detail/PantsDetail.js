@@ -5,11 +5,23 @@ import '../../css/PantsDetail.css';
 import SubNav from "../SubNav";
 
 class PantsDetail extends Component{
-    amountChange = () => {
-        if (this.value === "▲"){
-            alert("add");
+    constructor(props){
+        super(props)
+        this.state = {
+            count: 1
         }
     };
+
+    amountChange = (event) => {
+        alert(event.target.name)
+    };
+
+    handleChangeCount = event => {
+        this.setState({
+            count: event.target.value
+        })
+    };
+
     render(){
         return(
             <div id="wrap">
@@ -24,6 +36,7 @@ class PantsDetail extends Component{
                         <hr/>
                         <form>
                             <table>
+                                <tbody>
                                 <tr>
                                     <td>제조사 :</td>
                                     <td>(주)바지청년들</td>
@@ -38,10 +51,11 @@ class PantsDetail extends Component{
                                 </tr>
                                 <tr>
                                     <td>수량 :</td>
-                                    <td><input type="text" name="count" value="1"/></td>
-                                    <td><button onClick={this.amountChange}>▲</button></td>
+                                    <td><input type="text" name="count" value={this.state.count} onChange={this.handleChangeCount}/></td>
+                                    <td><button onClick={this.amountChange} name="btnUp">▲</button></td>
                                     <td><button>▼</button></td>
                                 </tr>
+                                </tbody>
                             </table>
                         </form>
                     </div>
