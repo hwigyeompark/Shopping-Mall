@@ -69,7 +69,7 @@ class PantsItem extends Component{
                                 </tr>
                                 <tr>
                                     <td>수량 :</td>
-                                    <td><input type="number" name="count" value={this.props.count} onChange={this.handleChangeCount} /></td>
+                                    <td><input type="text" name="count" value={this.props.count} onChange={this.handleChangeCount} /></td>
                                     <td><button onClick={this.amountChange} name="btnUp">▲</button></td>
                                     <td><button onClick={this.amountChange} name="btnDown">▼</button></td>
                                 </tr>
