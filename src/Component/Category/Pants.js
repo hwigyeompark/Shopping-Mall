@@ -11,7 +11,6 @@ import p3 from '../../img/pants3.gif';
 class Pants extends Component{
     detailView = (num) => {
         this.props.history.push("/category/pants/detailPants");
-        alert(this.props.className(1))
     };
 
     render(){
