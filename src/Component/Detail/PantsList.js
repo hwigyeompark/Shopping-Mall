@@ -75,6 +75,8 @@ class PantsItem extends Component{
                                 </tr>
                                 </tbody>
                             </table>
+                            <br/><br/>
+                            <button id="cartBtn">장바구니 담기</button>
                         </form>
                     </div>
                 </div>

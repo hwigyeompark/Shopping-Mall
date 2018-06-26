@@ -15,3 +15,9 @@
     margin-right: 45%;
     margin-top: -30%;
 }
+#cartBtn{
+    width: 200px;
+    font-size: 0.9em;
+    padding: 5px;
+    cursor: pointer;
+}
