@@ -9,8 +9,8 @@ class Header extends Component{
             <div id="header">
                 <h1><a href="/"><img src={logo}/></a></h1>
                 <ul>
-                    <li><a href="./Login.js">로그인</a></li>
-                    <li><a href="./Register.js">회원가입</a></li>
+                    <li><a href="/login">로그인</a></li>
+                    <li><a href="/join">회원가입</a></li>
                 </ul>
             </div>
         )

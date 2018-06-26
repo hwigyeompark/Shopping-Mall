@@ -113,7 +113,8 @@ class PantsList extends Component {
         return(
             <div>
                 {
-                    plist.map(pants =>
+                    plist.map((pants, idx) =>
+                        (this.props.match.params.id - 1) !== idx ? null :
                         <PantsItem img={pants.img} name={pants.name} company={pants.company} point={pants.point} price={pants.price}/>)
                 }
             </div>
