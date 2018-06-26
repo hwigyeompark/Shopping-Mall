@@ -25,3 +25,10 @@ a{text-decoration: none;}
     color: #555;
     text-align: center;
 }
+
+#navbar button{
+    padding: 5px;
+    font-size: 0.8em;
+    margin-top: 0.35%;
+    cursor: pointer;
+}

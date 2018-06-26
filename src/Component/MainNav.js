@@ -13,6 +13,7 @@ class MainNav extends Component{
                   <li><a href="/category/acc">악세사리</a></li>
                   <li><a href="/category/shoes">신발</a></li>
               </ul>
+              <button>장바구니</button>
           </div>
         );
     }
